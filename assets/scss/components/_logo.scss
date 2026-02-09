@@ -1,0 +1,29 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Logo Theme Switching CSS
+----------------------------------------*/
+
+/* === LOGO THEME SWITCHING === */
+/* Default (dark mode) - show dark logo, hide light logo */
+.logo-dark {
+    display: inline-block !important;
+}
+
+.logo-light {
+    display: none !important;
+}
+
+/* Light mode - hide dark logo, show light logo */
+[data-theme="light"] {
+    .logo-dark {
+        display: none !important;
+    }
+    
+    .logo-light {
+        display: inline-block !important;
+    }
+}
+
+/* !END: Logo Theme Switching CSS */
+

@@ -1,0 +1,147 @@
+/* ================================================
+   KAYAN GROUP - CUSTOM LOGO SIZE OVERRIDES
+   ================================================
+   This file overrides main.css restrictions to 
+   ensure logos display at the correct size.
+   MUST load AFTER main.css
+   ================================================ */
+
+/* === DESKTOP LOGO SIZE === */
+.header-logo img,
+.header .header-logo img,
+.header .primary-header-inner .header-logo img,
+.header .primary-header .header-logo img,
+.primary-header-inner .header-logo img {
+    height: 100px !important;
+    max-height: 100px !important;
+    width: auto !important;
+    max-width: 999px !important;
+    min-width: auto !important;
+}
+
+/* === STICKY/FIXED HEADER === */
+.sticky-active .header-logo img,
+.header.sticky-active .header-logo img,
+.header.fixed .header-logo img,
+.header.sticky-header .header-logo img {
+    height: 100px !important;
+    max-height: 100px !important;
+    width: auto !important;
+    max-width: 999px !important;
+}
+
+/* === SIDEBAR LOGO === */
+.side-menu-logo img,
+.side-menu-logo a img,
+.sidebar-area .side-menu-logo img {
+    height: 70px !important;
+    max-height: 70px !important;
+    width: auto !important;
+    max-width: 999px !important;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media only screen and (max-width: 992px) {
+
+    .header-logo img,
+    .header .header-logo img,
+    .header .primary-header-inner .header-logo img {
+        height: 80px !important;
+        max-height: 80px !important;
+        width: auto !important;
+        max-width: 999px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .header-logo img,
+    .header .header-logo img,
+    .header .primary-header-inner .header-logo img,
+    .header .primary-header-inner .header-right-wrap .header-right .header-logo img {
+        height: 70px !important;
+        max-height: 70px !important;
+        width: auto !important;
+        max-width: 999px !important;
+    }
+}
+
+/* === FORCE DISPLAY (OVERRIDE THEME SWITCHING) === */
+.logo-dark,
+.logo-light {
+    display: inline-block !important;
+    max-width: none !important;
+}
+
+/* Ensure proper theme switching still works */
+[data-theme="light"] .logo-dark {
+    display: none !important;
+}
+
+[data-theme="light"] .logo-light {
+    display: inline-block !important;
+}
+
+/* === HERO TEXT ELEGANT STYLING === */
+/* Make hero text white with elegant shadow for visibility */
+.hero-content .sub-title,
+.hero-content .sub-title.anim-text,
+.hero-section .hero-content .sub-title {
+    color: #ffffff !important;
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.3),
+        0 4px 20px rgba(0, 0, 0, 0.2),
+        0 8px 40px rgba(0, 0, 0, 0.1),
+        2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content .title,
+.hero-content .title.anim-text,
+.hero-section .hero-content .title {
+    color: #ffffff !important;
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.4),
+        0 6px 30px rgba(0, 0, 0, 0.3),
+        0 10px 50px rgba(0, 0, 0, 0.2),
+        3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .bottom-title,
+.hero-content .bottom-title.anim-text,
+.hero-section .hero-content .bottom-title {
+    color: #ffffff !important;
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.35),
+        0 5px 25px rgba(0, 0, 0, 0.25),
+        0 8px 45px rgba(0, 0, 0, 0.15),
+        2px 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+/* Target individual character divs for animated text */
+.hero-content .sub-title .char,
+.hero-content .sub-title .line .char {
+    color: #ffffff !important;
+}
+
+.hero-content .title .char,
+.hero-content .title .line .char {
+    color: #ffffff !important;
+}
+
+.hero-content .bottom-title .char,
+.hero-content .bottom-title .line .char {
+    color: #ffffff !important;
+}
+
+/* Target character divs with inline styles */
+.hero-content div.char[style*="display: inline-block"],
+.hero-section div.char[style*="display: inline-block"] {
+    color: #ffffff !important;
+}
+
+/* Ensure all nested elements inherit the white color */
+.hero-content .sub-title *,
+.hero-content .title *,
+.hero-content .bottom-title * {
+    color: #ffffff !important;
+}
