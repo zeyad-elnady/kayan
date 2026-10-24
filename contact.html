@@ -25,220 +25,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/custom-logo.css">
 
-    <style>
-        /* === BODY THEME STYLES === */
-        body {
-            background-color: #02050A !important;
-            color: var(--rr-color-text-body);
-        }
-
-        [data-theme="light"] body {
-            background-color: var(--rr-color-common-white) !important;
-            color: #74787C;
-        }
-
-        /* === LOGO THEME STYLES === */
-        .header-logo a {
-            color: var(--rr-color-common-white) !important;
-            font-family: var(--rr-ff-heading) !important;
-        }
-
-        [data-theme="light"] .header-logo a {
-            color: #2c3e50 !important;
-        }
-
-        .side-menu-logo a {
-            color: var(--rr-color-common-white) !important;
-            font-family: var(--rr-ff-heading) !important;
-        }
-
-        [data-theme="light"] .side-menu-logo a {
-            color: #2c3e50 !important;
-        }
-
-        /* === COMPREHENSIVE LIGHT MODE === */
-        [data-theme="light"] {
-            body {
-                background-color: #ffffff !important;
-                color: #2c3e50 !important;
-            }
-
-            .contact-section {
-                background-color: #ffffff !important;
-            }
-
-            .section-heading .section-title {
-                color: #2c3e50 !important;
-            }
-
-            .section-heading .sub-heading {
-                color: #602a85 !important;
-            }
-
-            .section-heading p {
-                color: #64748b !important;
-            }
-
-            .contact-form {
-                background-color: #ffffff !important;
-                border: 1px solid #e2e8f0 !important;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-            }
-
-            .form-control {
-                background-color: #ffffff !important;
-                border-color: #e2e8f0 !important;
-                color: #2c3e50 !important;
-            }
-
-            .form-control:focus {
-                border-color: #602a85 !important;
-                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
-            }
-
-            .contact-info {
-                background-color: #f8f9fa !important;
-                border: 1px solid #e2e8f0 !important;
-            }
-
-            .contact-info-item h4 {
-                color: #2c3e50 !important;
-            }
-
-            .contact-info-item p {
-                color: #64748b !important;
-            }
-
-            .page-header {
-                background: linear-gradient(135deg, #602a85 0%, #471869 100%) !important;
-            }
-
-            .page-header .title {
-                color: #ffffff !important;
-            }
-
-            .page-header .sub-title a {
-                color: rgba(255, 255, 255, 0.8) !important;
-            }
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                color: #2c3e50 !important;
-            }
-
-            p {
-                color: #64748b !important;
-            }
-
-            /* === FOOTER AND HEADER LIGHT MODE === */
-            .footer-section {
-                background-color: #2c3e50 !important;
-            }
-
-            .header {
-                background-color: rgba(255, 255, 255, 0.95) !important;
-                backdrop-filter: blur(10px) !important;
-            }
-
-            .header.sticky-active {
-                background-color: #ffffff !important;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-            }
-
-            .mobile-menu-items a {
-                color: #2c3e50 !important;
-            }
-
-            .sidebar-area {
-                background-color: #ffffff !important;
-                color: #2c3e50 !important;
-            }
-        }
-
-        /* === PRELOADER RESPONSIVE FIXES === */
-        .loading {
-            white-space: nowrap !important;
-            overflow: visible !important;
-            width: auto !important;
-            min-width: max-content;
-            text-align: center;
-        }
-
-        .loading:before,
-        .loading:after {
-            white-space: nowrap !important;
-            overflow: hidden !important;
-            display: inline-block;
-        }
-
-        /* Responsive font sizes to ensure single line */
-        @media (max-width: 1200px) {
-            .loading {
-                font-size: 80px !important;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .loading {
-                font-size: 70px !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .loading {
-                font-size: 50px !important;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .loading {
-                font-size: 35px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .loading {
-                font-size: 28px !important;
-            }
-        }
-
-        @media (max-width: 320px) {
-            .loading {
-                font-size: 22px !important;
-            }
-        }
-
-        /* Ensure preloader text centering works correctly */
-        #preloader .loading {
-            left: 50% !important;
-            transform: translate(-50%, -50%) !important;
-            width: auto !important;
-            max-width: 90vw;
-        }
-
-        /* === LOGO THEME SWITCHING === */
-        /* Default (dark mode) - show dark logo, hide light logo */
-        .logo-dark {
-            display: inline-block !important;
-        }
-
-        .logo-light {
-            display: none !important;
-        }
-
-        /* Light mode - hide dark logo, show light logo */
-        [data-theme="light"] .logo-dark {
-            display: none !important;
-        }
-
-        [data-theme="light"] .logo-light {
-            display: inline-block !important;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -248,8 +35,8 @@
             <div class="primary-header-inner">
                 <div class="header-logo d-lg-block">
                     <a href="index.html">
-                        <img src="assets/img/logo/LOGO.png" alt="Kayan Group" style="height: 100px;" class="logo-dark">
-                        <img src="assets/img/logo/LOGO light.png" alt="Kayan Group" style="height: 100px;"
+                        <img src="assets/img/logo/LOGO.png" alt="Kayan Group" class="logo-dark">
+                        <img src="assets/img/logo/LOGO light.png" alt="Kayan Group"
                             class="logo-light">
                     </a>
                 </div>
@@ -257,21 +44,11 @@
                     <div class="header-menu-wrap">
                         <div class="mobile-menu-items">
                             <ul>
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="project.html">Products</a>
-                                </li>
-                                <li>
-                                    <a href="blog.html">Blog</a>
-                                </li>
-                                <li class="active">
-                                    <a href="contact.html">Contact</a>
-                                </li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="project.html">Products</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li class="active"><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -367,6 +144,9 @@
                                 </span>
                             </div>
                         </div>
+                                                <a href="#" class="lang-btn" id="lang-toggle" title="العربية">
+                            <span class="lang-text">AR</span>
+                        </a>
                         <div class="sidebar-icon">
                             <button class="sidebar-trigger open">
                                 <svg width="24" height="23" viewBox="0 0 24 23" fill="none"
@@ -418,11 +198,22 @@
         <div class="side-menu-content">
             <div class="side-menu-logo">
                 <a href="index.html">
-                    <img src="assets/img/logo/LOGO.png" alt="Kayan Group" style="height: 70px;" class="logo-dark">
-                    <img src="assets/img/logo/LOGO light.png" alt="Kayan Group" style="height: 70px;"
+                    <img src="assets/img/logo/LOGO.png" alt="Kayan Group" class="logo-dark">
+                    <img src="assets/img/logo/LOGO light.png" alt="Kayan Group"
                         class="logo-light">
                 </a>
             </div>
+                        <!-- Navigation Menu for Sidebar -->
+            <nav class="side-menu-nav">
+                <ul class="side-nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
             <div class="side-menu-wrap"></div>
             <div class="side-menu-about">
                 <div class="side-menu-header">
@@ -627,9 +418,9 @@
                                 <div class="footer-logo mb-25">
                                     <a href="index.html">
                                         <img src="assets/img/logo/LOGO.png" alt="Kayan Group" class="logo-dark"
-                                            style="max-height: 90px;">
+                                            >
                                         <img src="assets/img/logo/LOGO light.png" alt="Kayan Group" class="logo-light"
-                                            style="max-height: 90px;">
+                                            >
                                     </a>
                                 </div>
                                 <p class="mb-25">Creating delicious food products that bring families together since
@@ -731,6 +522,7 @@
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/language.js"></script>
 </body>
 
 </html>

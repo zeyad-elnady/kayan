@@ -9,6 +9,7 @@ const translations = {
         navHome: "Home",
         navAbout: "About",
         navProducts: "Products",
+        navBlog: "Blog",
         navContact: "Contact",
         langBtnText: "AR",
         langBtnTitle: "العربية",
@@ -17,10 +18,12 @@ const translations = {
         heroSubtitle: "Creating",
         heroTitle: "Moments",
         heroBottomTitle: "to Enjoy & Share",
+        heroBtn: "Explore Products",
 
         // Process Section
         processSubHeading: "Manufacturing Process",
-        processSectionTitle: "From Ingredients to Your Table — in 4 Quality Steps",
+        processSectionTitle: "From Ingredients to Your Table<br>in 4 Quality Steps",
+        processHeaderDesc: "Our proven process ensures every product meets the highest standards of quality and taste",
         process1Title: "Quality Sourcing & Recipe Development",
         process1Desc: "We carefully select premium ingredients and develop recipes that meet international standards while capturing authentic flavors loved by Arab families.",
         process2Title: "Manufacturing & Quality Control",
@@ -98,6 +101,20 @@ const translations = {
         productsAllProducts: "ALL PRODUCTS",
         productsSearchPlaceholder: "Search products...",
 
+        // Error Page
+        errorPageTitle: "Page Not Found",
+        errorBreadcrumbHome: "Home",
+        errorBreadcrumbError: "404 Error",
+        error404Title: "Oops! Page Not Found",
+        error404Desc: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+        errorBackHome: "Back to Home",
+
+        // Blog Page
+        blogPageTitle: "Blog & News",
+        blogBreadcrumbHome: "Home",
+        blogBreadcrumbBlog: "Blog",
+        blogReadMore: "Read More",
+
         // Project/Showcase Section
         projectSubHeading: "Product Showcase",
         projectSectionTitle: "Discover Our Delicious <br> Product Portfolio",
@@ -150,6 +167,7 @@ const translations = {
         navHome: "الرئيسية",
         navAbout: "من نحن",
         navProducts: "المنتجات",
+        navBlog: "المدونة",
         navContact: "اتصل بنا",
         langBtnText: "EN",
         langBtnTitle: "English",
@@ -158,10 +176,12 @@ const translations = {
         heroSubtitle: "نصنع",
         heroTitle: "لحظات",
         heroBottomTitle: "للاستمتاع والمشاركة",
+        heroBtn: "استكشف منتجاتنا",
 
         // Process Section
-        processSubHeading: "عملية التصنيع",
-        processSectionTitle: "من المكونات إلى مائدتك — في 4 خطوات جودة",
+        processSubHeading: "مراحل التصنيع",
+        processSectionTitle: "من المكونات إلى مائدتكم<br>في 4 خطوات بجودة معتمدة",
+        processHeaderDesc: "عمليات تصنيع حديثة تضمن وصول منتجاتنا بأعلى معايير الجودة والنكهة الأصلية",
         process1Title: "اختيار المكونات وتطوير الوصفات",
         process1Desc: "نختار بعناية المكونات الفاخرة ونطور وصفات تلبي المعايير الدولية مع الحفاظ على النكهات الأصيلة المحبوبة لدى العائلات العربية.",
         process2Title: "التصنيع ومراقبة الجودة",
@@ -204,6 +224,20 @@ const translations = {
         project4Category: "قسم المقرمشات",
         project4Title: "سناكس ومقرمشات لذيذة يعشقها الأطفال والكبار على حد سواء.",
         project4Desc: "ينتج قسم المقرمشات لدينا شيبس ومقرمشات بنكهات متنوعة باستخدام تكنولوجيا قلي وتتبيل متطورة. حققت هذه المنتجات اختراقاً قوياً في السوق بين المستهلكين الشباب وتستمر في توسيع التوزيع عبر المتاجر والسوبر ماركت.",
+
+        // Error Page (Arabic)
+        errorPageTitle: "الصفحة غير موجودة",
+        errorBreadcrumbHome: "الرئيسية",
+        errorBreadcrumbError: "خطأ 404",
+        error404Title: "عفواً! الصفحة غير موجودة",
+        error404Desc: "الصفحة التي تبحث عنها قد تكون حُذفت أو تم تغيير اسمها أو غير متاحة مؤقتاً.",
+        errorBackHome: "العودة للرئيسية",
+
+        // Blog Page (Arabic)
+        blogPageTitle: "المدونة والأخبار",
+        blogBreadcrumbHome: "الرئيسية",
+        blogBreadcrumbBlog: "المدونة",
+        blogReadMore: "اقرأ المزيد",
 
         // Counter Section
         counter1Desc: "منتج غذائي<br>تم تصنيعه",
@@ -380,6 +414,12 @@ function applyLanguage(lang) {
     } else if (currentPage === 'project.html') {
         // Products page specific
         updateProductsPage(t);
+    } else if (currentPage === 'blog.html') {
+        // Blog page specific
+        updateBlogPage(t);
+    } else if (currentPage === 'error.html') {
+        // Error page specific
+        updateErrorPage(t);
     }
 }
 
@@ -403,6 +443,7 @@ function updateNavigation(t) {
         if (href === 'index.html') item.textContent = t.navHome;
         if (href === 'about.html') item.textContent = t.navAbout;
         if (href === 'project.html') item.textContent = t.navProducts;
+        if (href === 'blog.html') item.textContent = t.navBlog;
         if (href === 'contact.html') item.textContent = t.navContact;
     });
 }
@@ -412,19 +453,24 @@ function updateHeroSection(t) {
     const heroSubtitle = document.querySelector('.hero-content .sub-title');
     const heroTitle = document.querySelector('.hero-content .title');
     const heroBottomTitle = document.querySelector('.hero-content .bottom-title');
+    const heroBtn = document.querySelector('.hero-content .rr-primary-btn');
 
     if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
     if (heroTitle) heroTitle.textContent = t.heroTitle;
     if (heroBottomTitle) heroBottomTitle.textContent = t.heroBottomTitle;
+    if (heroBtn && t.heroBtn) {
+        heroBtn.innerHTML = t.heroBtn + ' <i class="fa-regular fa-arrow-right"></i>';
+    }
 }
 
 // Update process section
 function updateProcessSection(t) {
+    // Legacy process section support
     const processSubHeading = document.querySelector('.process-section .sub-heading');
     const processSectionTitle = document.querySelector('.process-section .section-title');
 
     if (processSubHeading) processSubHeading.textContent = t.processSubHeading;
-    if (processSectionTitle) processSectionTitle.textContent = t.processSectionTitle;
+    if (processSectionTitle) processSectionTitle.innerHTML = t.processSectionTitle;
 
     const processItems = document.querySelectorAll('.process-section .process-item');
     const processTitles = [t.process1Title, t.process2Title, t.process3Title, t.process4Title];
@@ -433,6 +479,23 @@ function updateProcessSection(t) {
     processItems.forEach((item, index) => {
         const title = item.querySelector('.title');
         const desc = item.querySelector('p');
+        if (title && processTitles[index]) title.textContent = processTitles[index];
+        if (desc && processDescs[index]) desc.textContent = processDescs[index];
+    });
+
+    // Modern manufacturing process section
+    const modernBadge = document.querySelector('.modern-section-header .badge');
+    const modernTitle = document.querySelector('.modern-section-header h2');
+    const modernDesc = document.querySelector('.modern-section-header p');
+
+    if (modernBadge) modernBadge.textContent = t.processSubHeading;
+    if (modernTitle) modernTitle.innerHTML = t.processSectionTitle;
+    if (modernDesc) modernDesc.textContent = t.processHeaderDesc || t.process1Desc;
+
+    const modernCards = document.querySelectorAll('.process-timeline .process-card');
+    modernCards.forEach((card, index) => {
+        const title = card.querySelector('h3');
+        const desc = card.querySelector('p');
         if (title && processTitles[index]) title.textContent = processTitles[index];
         if (desc && processDescs[index]) desc.textContent = processDescs[index];
     });
@@ -614,12 +677,10 @@ function updateFooter(t) {
 
     // Footer links
     const footerLinks = footer.querySelectorAll('.footer-list a');
-    footerLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === 'about.html') link.textContent = t.footerOurStory;
-        if (href === 'project.html') link.textContent = t.footerOurProducts;
-        if (href === 'contact.html') link.textContent = t.footerPartnership;
-    });
+    if (footerLinks[0]) footerLinks[0].textContent = t.footerOurStory;
+    if (footerLinks[1]) footerLinks[1].textContent = t.footerOurProducts;
+    if (footerLinks[2]) footerLinks[2].textContent = t.footerPartnership;
+    if (footerLinks[3]) footerLinks[3].textContent = t.footerContactUs;
 
     // Subscribe form
     const emailInput = footer.querySelector('.rr-subscribe-form .form-control');
@@ -721,6 +782,41 @@ function updateProductsPage(t) {
     // Search input
     const searchInput = document.querySelector('.product-search input, input[type="search"]');
     if (searchInput) searchInput.placeholder = t.productsSearchPlaceholder;
+}
+
+
+// Update Blog Page
+function updateBlogPage(t) {
+    const pageTitle = document.querySelector('.page-header-content .title');
+    const homeLink = document.querySelector('.page-header-content .home');
+    const innerPage = document.querySelector('.page-header-content .inner-page');
+    const readMoreLinks = document.querySelectorAll('.blog-card .read-more');
+
+    if (pageTitle && t.blogPageTitle) pageTitle.textContent = t.blogPageTitle;
+    if (homeLink && t.blogBreadcrumbHome) homeLink.textContent = t.blogBreadcrumbHome + ' ';
+    if (innerPage && t.blogBreadcrumbBlog) innerPage.textContent = ' ' + t.blogBreadcrumbBlog;
+    if (t.blogReadMore) {
+        readMoreLinks.forEach(link => {
+            link.innerHTML = t.blogReadMore + ' <i class="fas fa-arrow-right"></i>';
+        });
+    }
+}
+
+// Update Error Page
+function updateErrorPage(t) {
+    const pageTitle = document.querySelector('.page-header-content .title');
+    const homeLink = document.querySelector('.page-header-content .home');
+    const innerPage = document.querySelector('.page-header-content .inner-page');
+    const errorTitle = document.querySelector('.error-content h2');
+    const errorDesc = document.querySelector('.error-content p');
+    const backBtn = document.querySelector('.error-content .rr-primary-btn');
+
+    if (pageTitle && t.errorPageTitle) pageTitle.textContent = t.errorPageTitle;
+    if (homeLink && t.errorBreadcrumbHome) homeLink.textContent = t.errorBreadcrumbHome + ' ';
+    if (innerPage && t.errorBreadcrumbError) innerPage.textContent = ' ' + t.errorBreadcrumbError;
+    if (errorTitle && t.error404Title) errorTitle.textContent = t.error404Title;
+    if (errorDesc && t.error404Desc) errorDesc.textContent = t.error404Desc;
+    if (backBtn && t.errorBackHome) backBtn.innerHTML = t.errorBackHome + ' <i class="fa-regular fa-arrow-right"></i>';
 }
 
 // Initialize when DOM is ready

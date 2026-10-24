@@ -25,166 +25,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/custom-logo.css">
 
-    <!-- Mobile Responsive Fixes -->
-    <style>
-        /* === BODY THEME STYLES === */
-        body {
-            background-color: #02050A !important;
-            color: var(--rr-color-text-body);
-        }
-
-        [data-theme="light"] body {
-            background-color: var(--rr-color-common-white) !important;
-            color: #74787C;
-        }
-
-        /* === LOGO VISIBILITY FIX === */
-        /* Default (Dark Mode) - Show Dark Logo, Hide Light Logo */
-        .logo-light {
-            display: none !important;
-        }
-
-        .logo-dark {
-            display: inline-block !important;
-        }
-
-        /* Light Mode - Show Light Logo, Hide Dark Logo */
-        [data-theme="light"] .logo-light {
-            display: inline-block !important;
-        }
-
-        [data-theme="light"] .logo-dark {
-            display: none !important;
-        }
-
-        /* === COMPREHENSIVE LIGHT MODE === */
-        [data-theme="light"] {
-            body {
-                background-color: #ffffff !important;
-                color: #2c3e50 !important;
-            }
-
-            /* Header & Logo */
-            .header-logo a {
-                color: #2c3e50 !important;
-            }
-
-            .side-menu-logo a {
-                color: #2c3e50 !important;
-            }
-
-            .header {
-                background-color: rgba(255, 255, 255, 0.95) !important;
-                backdrop-filter: blur(10px) !important;
-            }
-
-            .header.sticky-active {
-                background-color: #ffffff !important;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-            }
-
-            .mobile-menu-items a {
-                color: #2c3e50 !important;
-            }
-
-            .sidebar-trigger {
-                color: #2c3e50 !important;
-                border-color: #e2e8f0 !important;
-            }
-
-            .sidebar-area {
-                background-color: #ffffff !important;
-                color: #2c3e50 !important;
-            }
-
-            .side-menu-content {
-                background-color: #ffffff !important;
-            }
-
-            .side-menu-about p,
-            .side-menu-list p,
-            .side-menu-list a {
-                color: #64748b !important;
-            }
-
-            /* Page Header (Specific to project-details) */
-            .page-header {
-                position: relative;
-            }
-
-            .page-header .title {
-                color: #ffffff !important;
-                text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            }
-
-            .page-header .sub-title,
-            .page-header .sub-title a {
-                color: #ffffff !important;
-                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            }
-
-            /* Content Sections */
-            .project-details {
-                background-color: #ffffff !important;
-            }
-
-            .project-details-item {
-                background-color: #f8f9fa !important;
-                border: 1px solid #e2e8f0 !important;
-            }
-
-            .project-details-item .icon {
-                color: #602a85 !important;
-                background-color: rgba(96, 42, 133, 0.1) !important;
-            }
-
-            .project-details-item .content span {
-                color: #64748b !important;
-            }
-
-            .project-details-item .content .item-title {
-                color: #2c3e50 !important;
-            }
-
-            .details-title {
-                color: #2c3e50 !important;
-            }
-
-            p {
-                color: #64748b !important;
-            }
-
-            /* Footer */
-            .footer-section {
-                background-color: #2c3e50 !important;
-            }
-
-            .footer-widget,
-            .footer-widget .widget-title,
-            .footer-widget p,
-            .footer-list a,
-            .address-list a {
-                color: #ffffff !important;
-                /* Keep footer dark/elegant even in light mode */
-            }
-
-            .footer-widget p,
-            .footer-list a,
-            .address-list a {
-                color: rgba(255, 255, 255, 0.8) !important;
-            }
-
-            .rr-subscribe-form .form-control {
-                background-color: rgba(255, 255, 255, 0.1) !important;
-                border: 1px solid rgba(255, 255, 255, 0.2) !important;
-                color: #ffffff !important;
-            }
-
-            .rr-subscribe-form .form-control::placeholder {
-                color: rgba(255, 255, 255, 0.6) !important;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -195,8 +36,8 @@
             <div class="primary-header-inner">
                 <div class="header-logo d-lg-block">
                     <a href="index.html">
-                        <img src="assets/img/logo/LOGO.png" alt="Kayan Group" style="height: 100px;" class="logo-dark">
-                        <img src="assets/img/logo/LOGO light.png" alt="Kayan Group" style="height: 100px;"
+                        <img src="assets/img/logo/LOGO.png" alt="Kayan Group" class="logo-dark">
+                        <img src="assets/img/logo/LOGO light.png" alt="Kayan Group"
                             class="logo-light">
                     </a>
                 </div>
@@ -204,15 +45,10 @@
                     <div class="header-menu-wrap">
                         <div class="mobile-menu-items">
                             <ul>
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li class="active">
-                                    <a href="project.html">Products</a>
-                                </li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="active"><a href="project.html">Products</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -330,8 +166,8 @@
         <div class="side-menu-content">
             <div class="side-menu-logo">
                 <a href="index.html">
-                    <img src="assets/img/logo/LOGO.png" alt="Kayan Group" style="height: 70px;" class="logo-dark">
-                    <img src="assets/img/logo/LOGO light.png" alt="Kayan Group" style="height: 70px;"
+                    <img src="assets/img/logo/LOGO.png" alt="Kayan Group" class="logo-dark">
+                    <img src="assets/img/logo/LOGO light.png" alt="Kayan Group"
                         class="logo-light">
                 </a>
             </div>
@@ -387,20 +223,14 @@
             </div>
 
             <!-- Navigation Menu for Sidebar -->
+            <!-- Navigation Menu for Sidebar -->
             <nav class="side-menu-nav">
                 <ul class="side-nav-menu">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li class="active">
-                        <a href="project.html">Products</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="active"><a href="project.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
@@ -562,9 +392,9 @@
                                 <div class="footer-logo mb-25">
                                     <a href="index.html">
                                         <img src="assets/img/logo/LOGO.png" alt="Kayan Group" class="logo-dark"
-                                            style="max-height: 90px;">
+                                            >
                                         <img src="assets/img/logo/LOGO light.png" alt="Kayan Group" class="logo-light"
-                                            style="max-height: 90px;">
+                                            >
                                     </a>
                                 </div>
                                 <p class="mb-25">Creating delicious food products that bring families together since
@@ -666,6 +496,7 @@
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/language.js"></script>
 </body>
 
 </html>
